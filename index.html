@@ -155,16 +155,9 @@
         }
 
         .hazard-details {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease;
+            margin-top: 15px;
             font-size: 0.9rem;
             color: #ccc;
-        }
-
-        .hazard-card.expanded .hazard-details {
-            max-height: 400px;
-            margin-top: 15px;
         }
 
         /* Stats Counter */
@@ -322,7 +315,7 @@
             <h1>Fall Protection:</h1>
             <h1 style="color:white; margin-top:-20px;">The Difference Between Life and a Statistic</h1>
             <p style="margin-top: 40px; font-weight: 700; color: var(--yellow); font-size: 1.5rem;">
-                CSTR 014: Construction Safety | Presentation by [Your Name]
+                CSTR 014: Construction Safety | Presentation by Brandon
             </p>
             <div class="hazard-tape"></div>
         </section>
@@ -376,7 +369,7 @@
         <section class="slide">
             <h2>Common Hazards: Edges & Ladders</h2>
             <div class="card-container">
-                <div class="hazard-card" onclick="toggleCard(this)">
+                <div class="hazard-card">
                     <h3>Roof Edges</h3>
                     <p>A single misstep or wind gust is all it takes.</p>
                     <div class="hazard-details">
@@ -384,7 +377,7 @@
                         <strong>Prevention:</strong> Guardrails, Warning lines, or PFAS. Never assume "one quick task" is safe without a tie-off. Keep materials away from edges to prevent tripping.
                     </div>
                 </div>
-                <div class="hazard-card" onclick="toggleCard(this)">
+                <div class="hazard-card">
                     <h3>Ladders</h3>
                     <p>The #1 tool involved in fatal falls.</p>
                     <div class="hazard-details">
@@ -399,7 +392,7 @@
         <section class="slide">
             <h2>Common Hazards: Scaffolds & Skylights</h2>
             <div class="card-container">
-                <div class="hazard-card" onclick="toggleCard(this)">
+                <div class="hazard-card">
                     <h3>Scaffolding</h3>
                     <p>Incomplete platforms are death traps.</p>
                     <div class="hazard-details">
@@ -407,7 +400,7 @@
                         <strong>Rules:</strong> Must be built and inspected by a <em>Competent Person</em>. Use guardrails or PFAS above 10 feet. Never use makeshift planks.
                     </div>
                 </div>
-                <div class="hazard-card" onclick="toggleCard(this)">
+                <div class="hazard-card">
                     <h3>Skylights</h3>
                     <p>The "Invisible" Hole.</p>
                     <div class="hazard-details">
