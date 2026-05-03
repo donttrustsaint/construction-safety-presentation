@@ -25,7 +25,7 @@
             background-color: var(--dark);
             color: var(--white);
             overflow: hidden;
-            height: 100vh;
+            height: 100dvh;
             width: 100vw;
         }
 
@@ -67,15 +67,15 @@
         /* Presentation Wrapper */
         .presentation {
             display: flex;
-            height: 100vh;
+            height: 100dvh;
             transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
             will-change: transform;
         }
 
         .slide {
             flex: 0 0 100vw; /* Prevent shrinking and lock width to viewport */
-            height: 100vh;
-            padding: 60px 10%;
+            height: 100dvh;
+            padding: 40px 8%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -83,6 +83,12 @@
             opacity: 0; /* Start invisible */
             transition: opacity 0.6s ease;
             visibility: hidden; /* Hide non-active slides from screen readers */
+            overflow-y: auto; /* Handle overflow gracefully */
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+        }
+
+        .slide::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for Chrome/Safari */
         }
 
         .slide.active {
@@ -330,8 +336,8 @@
                     <p>• <strong>1926.501</strong>: Duty to have protection.</p>
                     <p>• <strong>1926.502</strong>: System criteria.</p>
                     <p>• <strong>1926.503</strong>: Training requirements.</p>
-                    <div style="margin-top: 20px; display: flex; justify-content: center;">
-                        <img src="six_foot_rule.png" alt="6 Foot Rule Illustration" style="max-height: 400px; width: auto; max-width: 100%; border-radius: 8px; border: 2px solid var(--slate); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    <div style="margin-top: 15px; display: flex; justify-content: center;">
+                        <img src="six_foot_rule.png" alt="6 Foot Rule Illustration" style="max-height: 30vh; width: auto; max-width: 100%; border-radius: 8px; border: 2px solid var(--slate); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                     </div>
                 </div>
                 <div class="card-container" style="grid-template-columns: 1fr;">
