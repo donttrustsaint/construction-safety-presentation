@@ -227,42 +227,7 @@
             color: #888;
         }
 
-        /* Presenter Notes Overlay */
-        #presenter-notes {
-            position: fixed;
-            bottom: 100px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80%;
-            max-width: 900px;
-            background: rgba(0,0,0,0.95);
-            padding: 30px;
-            border: 2px solid var(--yellow);
-            border-radius: 8px;
-            z-index: 2000;
-            display: none;
-            max-height: 60vh;
-            overflow-y: auto;
-        }
-
-        .presenter-toggle {
-            position: fixed;
-            bottom: 40px;
-            left: 40px;
-            background: transparent;
-            color: #666;
-            border: 1px solid #666;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 0.8rem;
-            border-radius: 4px;
-            z-index: 1000;
-        }
-
-        .presenter-toggle.active {
-            border-color: var(--yellow);
-            color: var(--yellow);
-        }
+        /* Custom Accents */
 
         /* Custom Accents */
         .hazard-tape {
@@ -295,10 +260,16 @@
             width: 100%;
             aspect-ratio: 16/9;
             background: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border-radius: 8px;
+            overflow: hidden;
             border: 2px solid var(--slate);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         @media (max-width: 768px) {
@@ -384,6 +355,9 @@
                     <div class="hazard-details">
                         <strong>The Risk:</strong> Distraction or slippery surfaces.<br>
                         <strong>Prevention:</strong> Guardrails, Warning lines, or PFAS. Never assume "one quick task" is safe without a tie-off. Keep materials away from edges to prevent tripping.
+                        <div style="margin-top: 15px; text-align: center;">
+                            <img src="roof_safety.png" alt="Roof Edge Safety" style="max-height: 20vh; width: auto; border-radius: 4px; border: 1px solid var(--slate);">
+                        </div>
                     </div>
                 </div>
                 <div class="hazard-card">
@@ -392,6 +366,9 @@
                     <div class="hazard-details">
                         <strong>The Risk:</strong> Unsecured bases, overreaching, or carrying tools by hand.<br>
                         <strong>Rules:</strong> Maintain 3 points of contact. Inspect before use. Ensure a 4:1 ratio for extension ladders. Use a tool belt to keep hands free.
+                        <div style="margin-top: 15px; text-align: center;">
+                            <img src="ladder_safety.png" alt="Ladder Safety" style="max-height: 20vh; width: auto; border-radius: 4px; border: 1px solid var(--slate);">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -405,17 +382,22 @@
                     <h3>Scaffolding</h3>
                     <p>Incomplete platforms are death traps.</p>
                     <div class="hazard-details">
-                        <strong>The Risk:</strong> Missing guardrails or unstable footing.<br>
-                        <strong>Rules:</strong> Must be built and inspected by a <em>Competent Person</em>. Use guardrails or PFAS above 10 feet. Never use makeshift planks.
+                        <strong>Risk:</strong> Missing guardrails, unstable footing.<br>
+                        <strong>Safety:</strong> Inspect daily + Guardrails/PFAS.
+                        <div style="margin-top: 15px; text-align: center;">
+                            <img src="scaffold_safety.png" alt="Scaffold Safety" style="max-height: 20vh; width: auto; border-radius: 4px; border: 1px solid var(--slate);">
+                        </div>
                     </div>
                 </div>
                 <div class="hazard-card">
                     <h3>Skylights</h3>
                     <p>The "Invisible" Hole.</p>
                     <div class="hazard-details">
-                        <strong>The Risk:</strong> Looking solid but failing under weight.<br>
-                        <strong>Case:</strong> Georgia 2024. Worker stepped on a skylight and died. <br>
-                        <strong>Prevention:</strong> Treat as HOLES—cover or guard. Never stand on or near without protection.
+                        <strong>Risk:</strong> Looks solid, breaks under weight.<br>
+                        <strong>Safety:</strong> Treat as a hole. Cover or guard.
+                        <div style="margin-top: 15px; text-align: center;">
+                            <img src="skylight_safety.png" alt="Skylight Safety" style="max-height: 20vh; width: auto; border-radius: 4px; border: 1px solid var(--slate);">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -424,26 +406,34 @@
         <!-- SLIDE 6: ACTIVE SYSTEMS -->
         <section class="slide">
             <h2>Personal Fall Arrest Systems (PFAS)</h2>
-            <div class="grid-2">
-                <div class="card-container" style="grid-template-columns: 1fr;">
-                    <div class="hazard-card">
-                        <h3>A - Anchorage</h3>
-                        <p>Must support <strong>5,000 lbs</strong> per worker attached.</p>
-                    </div>
-                    <div class="hazard-card">
-                        <h3>B - Body Harness</h3>
-                        <p>Full-body ONLY. Body belts are banned for arrest.</p>
-                    </div>
-                    <div class="hazard-card">
-                        <h3>C - Connectors</h3>
-                        <p>Lanyards, lifelines, and deceleration devices.</p>
-                    </div>
+            <p style="margin-bottom: 30px; font-size: 1.2rem;"><strong>PFAS</strong> is active protection. It requires 100% tie-off and constant inspection of webbing and hardware.</p>
+            
+            <div class="grid-2" style="grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                <!-- Left: The Diagram -->
+                <div style="text-align: center;">
+                    <img src="abc_safety.jpeg" alt="ABC's of Fall Protection" style="max-height: 50vh; width: auto; border-radius: 8px; border: 2px solid var(--yellow); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                 </div>
-                <div>
-                    <p><strong>PFAS</strong> is active protection. It requires 100% tie-off and constant inspection of webbing and hardware.</p>
-                    <p><strong>Warning:</strong> Improper setup (too much slack) can lead to hitting the ground before the system arrests.</p>
+
+                <!-- Right: The Definitions -->
+                <div class="card-container" style="grid-template-columns: 1fr; gap: 15px;">
+                    <div class="hazard-card" style="padding: 15px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 5px;">A - Anchorage</h3>
+                        <p style="font-size: 0.95rem;">Must support <strong>5,000 lbs</strong> per worker attached.</p>
+                    </div>
+                    <div class="hazard-card" style="padding: 15px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 5px;">B - Body Harness</h3>
+                        <p style="font-size: 0.95rem;">Full-body ONLY. Body belts are banned for arrest.</p>
+                    </div>
+                    <div class="hazard-card" style="padding: 15px;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 5px;">C - Connectors</h3>
+                        <p style="font-size: 0.95rem;">Lanyards, lifelines, and deceleration devices.</p>
+                    </div>
                 </div>
             </div>
+
+            <p style="margin-top: 30px; padding: 15px; border-left: 4px solid #ff4d4d; background: rgba(255, 77, 77, 0.1);">
+                <strong style="color: #ff4d4d;">⚠️ Warning:</strong> Improper setup (too much slack) can lead to hitting the ground before the system arrests.
+            </p>
         </section>
 
         <!-- SLIDE 7: PASSIVE SYSTEMS -->
@@ -466,15 +456,37 @@
         <!-- SLIDE 8: PHYSICS -->
         <section class="slide">
             <h2>The Physics of a Fall</h2>
-            <div class="grid-2">
-                <div class="case-study" style="border-right: 10px solid var(--yellow);">
-                    <h3>Swing Fall Hazard</h3>
-                    <p>If you aren't tied off directly above your head, you will swing like a pendulum, hitting structure or the ground with lethal force.</p>
+            <p style="margin-bottom: 20px; font-size: 1.1rem;"><strong>Physics</strong>: A fall isn't just a drop; it's a calculation of force and space.</p>
+            
+            <!-- Top Row: Images Side-by-Side -->
+            <div class="grid-2" style="gap: 30px; margin-bottom: 30px;">
+                <div style="text-align: center;">
+                    <img src="swing.jpeg" alt="Swing Fall Hazard" style="max-height: 35vh; width: auto; border-radius: 8px; border: 2px solid var(--slate); box-shadow: 0 10px 20px rgba(0,0,0,0.3);">
+                    <p style="font-size: 0.9rem; color: var(--yellow); margin-top: 10px; font-weight: bold;">Swing Fall Hazard</p>
                 </div>
-                <div>
-                    <h3>Fall Clearance Calculation</h3>
-                    <p>Free Fall (6ft) + Deceleration (3.5ft) + Safety Factor (3ft) + Height of Worker (6ft) = <strong>18.5ft Total Distance Needed</strong>.</p>
-                    <p>A 6ft lanyard often needs more room than you think!</p>
+                <div style="text-align: center;">
+                    <img src="clearnace.jpeg" alt="Fall Clearance Diagram" style="max-height: 35vh; width: auto; border-radius: 8px; border: 2px solid var(--slate); box-shadow: 0 10px 20px rgba(0,0,0,0.3);">
+                    <p style="font-size: 0.9rem; color: var(--yellow); margin-top: 10px; font-weight: bold;">Total Clearance Required</p>
+                </div>
+            </div>
+
+            <!-- Bottom Row: 4 Cards Side-by-Side -->
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
+                <div class="hazard-card" style="padding: 12px; border-top: 3px solid var(--yellow);">
+                    <h3 style="font-size: 1rem; margin-bottom: 5px;">Fall Distance</h3>
+                    <p style="font-size: 0.85rem;">Free fall before system engages.</p>
+                </div>
+                <div class="hazard-card" style="padding: 12px; border-top: 3px solid var(--yellow);">
+                    <h3 style="font-size: 1rem; margin-bottom: 5px;">System Stretch</h3>
+                    <p style="font-size: 0.85rem;">Lanyard + Harness stretch.</p>
+                </div>
+                <div class="hazard-card" style="padding: 12px; border-top: 3px solid var(--yellow);">
+                    <h3 style="font-size: 1rem; margin-bottom: 5px;">Worker Height</h3>
+                    <p style="font-size: 0.85rem;">Height of the person.</p>
+                </div>
+                <div class="hazard-card" style="padding: 12px; border-top: 3px solid var(--yellow);">
+                    <h3 style="font-size: 1rem; margin-bottom: 5px;">Safety Margin</h3>
+                    <p style="font-size: 0.85rem;">The 2-3 ft "Buffer Zone".</p>
                 </div>
             </div>
         </section>
@@ -483,40 +495,51 @@
         <section class="slide">
             <div class="case-study">
                 <h2>Case Study: The Routine Task Fatality</h2>
-                <p><strong>The Incident:</strong> A worker was installing a soffit on a residential home. During a simple descent on a ladder (12 feet), he lost control and fell.</p>
+                <p><strong>The Incident:</strong> A worker was installing a soffit on a residential home. During a simple descent on a ladder (<strong>12 feet</strong>), he lost control and fell.</p>
                 <p><strong>The Failure:</strong> Exposure during descent. Hazard exposure doesn't end when the "main job" is done.</p>
-                <p><strong>The Lesson:</strong> 12 feet is enough to be fatal. Routine tasks are the deadliest because we drop our guard.</p>
+                <p><strong>The Lesson:</strong> <strong>12 feet</strong> is enough to be fatal. <strong>Routine tasks</strong> are the deadliest because we drop our guard.</p>
             </div>
         </section>
 
         <!-- SLIDE 10: VIDEO / CASE II -->
         <section class="slide">
-            <h2>Safety in Action</h2>
-            <div class="grid-2">
-                <div class="video-container">
-                    <p style="color: #666;">[ YouTube Placeholder: "Safety in Action" ]</p>
-                </div>
-                <div>
-                    <h3>Secondary Case: NIOSH FACE</h3>
-                    <p>13.5ft fall from a residential roof to a concrete driveway. Fatal outcome.</p>
-                    <p><strong>Contributing Factors:</strong> Roof pitch, hard landing surface, and lack of tie-off.</p>
-                    <p><strong>The Reality:</strong> "Not that high" is a dangerous myth. Gravity doesn't negotiate.</p>
-                </div>
+            <h2 style="text-align: center; border-left: none; padding-left: 0;">Safety in Action: Case Analysis</h2>
+            
+            <div style="max-width: 900px; margin: 0 auto; width: 100%;">
+                <a href="https://www.youtube.com/watch?v=imiFPy2DZkM" target="_blank" style="text-decoration: none; display: block;">
+                    <div class="video-container" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://img.youtube.com/vi/imiFPy2DZkM/maxresdefault.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; transition: transform 0.3s ease; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+                        <div class="nav-btn" style="background: #FF0000; color: white; padding: 20px 50px; font-size: 1.5rem; display: flex; align-items: center; gap: 15px;">
+                            <span>▶</span> WATCH ON YOUTUBE
+                        </div>
+                        <p style="font-size: 1rem; color: #fff; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">(Full Demonstration)</p>
+                    </div>
+                </a>
+                
+                <p style="text-align: center; margin-top: 20px; font-size: 1.2rem; color: var(--yellow); font-weight: bold;">
+                    Real Fall Hazard Case – Solar Installation
+                </p>
             </div>
         </section>
 
         <!-- SLIDE 11: HUMAN FACTORS -->
         <section class="slide">
             <h2>Human Factors & Planning</h2>
-            <div class="grid-2">
+            <div class="grid-2" style="gap: 60px;">
                 <div>
-                    <h3>Normalization of Deviance</h3>
-                    <p>"I've done this a thousand times without a harness and I'm fine."</p>
-                    <p>This mindset is why experienced workers are often at <strong>higher risk</strong>. Habitual shortcuts eventually lead to catastrophe.</p>
+                    <h3 style="margin-bottom: 20px;">Normalization of Deviance</h3>
+                    <p style="font-style: italic; font-size: 1.5rem; color: var(--yellow); margin-bottom: 30px; line-height: 1.2; border-left: 4px solid var(--yellow); padding-left: 20px;">
+                        "I've done this a thousand times without a harness and I'm fine."
+                    </p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 15px; font-size: 1.1rem; border-left: 2px solid #666; padding-left: 15px;">• Repeated unsafe behavior becomes normal</li>
+                        <li style="margin-bottom: 15px; font-size: 1.1rem; border-left: 2px solid #666; padding-left: 15px;">• Experienced workers often take more risks</li>
+                        <li style="margin-bottom: 15px; font-size: 1.1rem; border-left: 2px solid #666; padding-left: 15px;">• Shortcuts lead to accidents</li>
+                    </ul>
                 </div>
-                <div class="hazard-card">
+                <div class="hazard-card" style="border-top: 4px solid var(--yellow); padding: 40px;">
                     <h3>Pre-Task Planning</h3>
-                    <p>A <strong>Job Hazard Analysis (JHA)</strong> should identify anchor points and rescue plans <em>before</em> the shift starts. Production pressure must never outweigh safety.</p>
+                    <p>A <strong>Job Hazard Analysis (JHA)</strong> must identify anchor points and rescue plans <em>before</em> the shift starts.</p>
+                    <p style="margin-top: 20px; font-weight: bold; color: #ff4d4d;">Production pressure must never outweigh safety.</p>
                 </div>
             </div>
         </section>
@@ -531,14 +554,6 @@
             </p>
             <div class="hazard-tape"></div>
         </section>
-    </div>
-
-    <button class="presenter-toggle" id="presenterToggle" onclick="togglePresenter()">Show Speaker Notes</button>
-    <div id="presenter-notes">
-        <h3 style="color: var(--yellow); margin-bottom: 10px; border-bottom: 1px solid #444; padding-bottom: 5px;">Speaker Notes & Deep Research</h3>
-        <div id="notes-content">
-            <!-- Notes will be populated by JS -->
-        </div>
     </div>
 
     <div class="controls">
@@ -556,21 +571,6 @@
         const nextBtn = document.getElementById('nextBtn');
         const currentSlideNum = document.getElementById('currentSlideNum');
         const slides = document.querySelectorAll('.slide');
-
-        const speakerNotes = [
-            "<strong>Slide 1 (Title):</strong> Start strong. Explain that you aren't just talking about rules—you're talking about the line between going home and becoming a statistic. Use a somber but professional tone.",
-            "<strong>Slide 2 (Definitions):</strong> Mention Subpart M. Explain that the 6-foot rule is the construction default. Contrast Prevention (removing the cliff) vs Arrest (catching you as you fall).",
-            "<strong>Slide 3 (Data):</strong> TRIGGER THE COUNTER. 423 deaths in 2023. This is 38.5% of construction fatalities. Mention CPWR research: construction averages 360+ fatal falls/year. This is an epidemic in our industry.",
-            "<strong>Slide 4 (Hazards I):</strong> Roofs are obvious, but LADDERS are the silent killers. 3 points of contact isn't just a suggestion—it's the only thing keeping you balanced if the ladder shifts. Mention extension ladder 4:1 setup.",
-            "<strong>Slide 5 (Hazards II):</strong> Scaffolds need a 'Competent Person'. Mention the 2024 Georgia Skylight case—a worker stepped on what looked like a solid surface and fell through. Treat skylights as HOLES.",
-            "<strong>Slide 6 (PFAS):</strong> The ABCs. A is for Anchorage: 5,000 lbs is roughly the weight of a Ford F-150. That's the shock load of a falling human. Body belts are strictly for positioning, NEVER for arrest.",
-            "<strong>Slide 7 (Passive):</strong> Hierarchy of Controls. Passive systems are better because they don't rely on human memory. Guardrails work even if you're tired. Hole covers must be MARKED—don't let someone lift a 'random piece of plywood' and fall through.",
-            "<strong>Slide 8 (Physics):</strong> This is the 'Seatbelt vs Roadbed' analogy. A seatbelt is useless if the cliff is 50 feet deep but you hit the ground in 10. Explain the 18.5ft clearance requirement for a 6ft lanyard.",
-            "<strong>Slide 9 (Case Study I):</strong> The 12ft ladder fatality. This worker was just descending. This proves that 'routine' is when we are most in danger. 12 feet is plenty of distance to cause a fatal head injury.",
-            "<strong>Slide 10 (Video/Case II):</strong> Mention the NIOSH FACE case: 13.5ft to a concrete driveway. Concrete is unforgiving. If you have the video, play it here to show real-world impact.",
-            "<strong>Slide 11 (Human Factors):</strong> Talk about the 'Normalization of Deviance'. We get away with it once, then twice, then it becomes 'how we do it'. That's when the accident happens. JHAs must be done EVERY shift.",
-            "<strong>Slide 12 (Conclusion):</strong> Final powerful statement. Rescue planning is the last piece—suspension trauma can kill in minutes even after the fall is arrested. Safety is a choice you make every morning."
-        ];
 
         function updateUI() {
             // Move the container by the exact pixel width of the window
@@ -590,9 +590,6 @@
             if (currentSlide === 2) {
                 animateCounter('deathCount', 423, 2000);
             }
-
-            // Update notes
-            document.getElementById('notes-content').innerHTML = speakerNotes[currentSlide];
         }
 
         function moveSlide(dir) {
@@ -619,19 +616,6 @@
             window.requestAnimationFrame(step);
         }
 
-        function togglePresenter() {
-            const notes = document.getElementById('presenter-notes');
-            const btn = document.getElementById('presenterToggle');
-            if (notes.style.display === 'block') {
-                notes.style.display = 'none';
-                btn.classList.remove('active');
-                btn.innerText = "Show Speaker Notes";
-            } else {
-                notes.style.display = 'block';
-                btn.classList.add('active');
-                btn.innerText = "Hide Speaker Notes";
-            }
-        }
 
         // Keyboard support
         document.addEventListener('keydown', (e) => {
